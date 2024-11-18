@@ -1,4 +1,5 @@
-import { getCoAuthors } from "./coauthors.server"
+import { describe, it, expect } from "vitest"
+import { getCoAuthors } from "./coauthors.server.ts"
 
 describe("getCoAuthors", () => {
   it("Should return none", () => {
