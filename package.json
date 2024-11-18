@@ -41,10 +41,7 @@
     "lint": "eslint --cache src scripts e2e"
   },
   "dependencies": {
-    "duckdb-async": "^1.0.0",
-    "fastify": "^5.0.0",
-    "typescript-eslint": "^8.12.2",
-    "vite": "^5.4.10"
+    "duckdb-async": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -132,7 +129,9 @@
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
     "typescript": "5.2",
+    "typescript-eslint": "^8.14.0",
     "uniqolor": "^1.1.1",
+    "vite": "^5.4.11",
     "vite-plugin-cjs-interop": "^2.1.4",
     "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.1.4",
