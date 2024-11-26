@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState, useTransition, type HTMLAttributes } from "react"
-import { Icon } from "@mdi/react"
+import Icon from "@mdi/react"
 import { mdiCheckboxOutline, mdiCheckboxBlankOutline, mdiMenuUp, mdiClose } from "@mdi/js"
 import clsx from "clsx"
 import anitruck from "~/assets/truck.gif"
 import { Popover, ArrowContainer } from "react-tiny-popover"
 import { HexColorPicker } from "react-colorful"
 import { useData } from "~/contexts/DataContext"
-import { useSubmit } from "@remix-run/react"
+import { useSubmit } from "react-router";
 import { getPathFromRepoAndHead } from "~/util"
 
 export const CloseButton = ({

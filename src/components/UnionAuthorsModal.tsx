@@ -1,13 +1,13 @@
 import { useTransition, useState, useRef, useEffect } from "react"
-import { useNavigation, useSubmit } from "@remix-run/react"
+import { useNavigation, useSubmit } from "react-router";
 import { useData } from "~/contexts/DataContext"
 import { getPathFromRepoAndHead } from "~/util"
 import { CloseButton, LegendDot, CheckboxWithLabel } from "~/components/util"
 import { useMetrics } from "~/contexts/MetricContext"
-import { useKey } from "react-use"
-import { Icon } from "@mdi/react"
+import Icon from "@mdi/react"
 import { mdiArrowUp, mdiAccountMultiple } from "@mdi/js"
 import { createPortal } from "react-dom"
+import { useKey } from "~/hooks"
 
 export function UnionAuthorsModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { repo, databaseInfo } = useData()
@@ -262,7 +262,7 @@ export function UnionAuthorsModal({ open, onClose }: { open: boolean; onClose: (
           </div>
         </div>
         <div className="overflow-y-auto">
-          <div className="grid h-min min-h-0 grid-cols-1 gap-4 rounded-md bg-white p-4 shadow lg:grid-cols-2 xl:grid-cols-3  dark:bg-gray-700">
+          <div className="grid h-min min-h-0 grid-cols-1 gap-4 rounded-md bg-white p-4 shadow lg:grid-cols-2 xl:grid-cols-3 dark:bg-gray-700">
             {authorUnions.length > 0 ? (
               groupedAuthorsEntries
             ) : (
